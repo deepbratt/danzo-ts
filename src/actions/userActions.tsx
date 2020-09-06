@@ -1,17 +1,17 @@
-const Login = user => {
+const Login = (user) => {
   return {
     type: "LOGIN",
-    payload: user
+    payload: user,
   };
 };
 
 const Logout = () => {
   return {
-    type: "LOGOUT"
+    type: "LOGOUT",
   };
 };
 
 export default {
   Login,
-  Logout
+  Logout,
 };

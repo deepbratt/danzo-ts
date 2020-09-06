@@ -1,6 +1,6 @@
 import { Badge, Button, Container, Content, Footer, FooterTab, Header, Icon, Text } from "native-base";
 import React from "react";
-export const App = () => {
+const App = () => {
   return (
     <Container>
       <Header />

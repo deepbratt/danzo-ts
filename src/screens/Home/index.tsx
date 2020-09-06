@@ -1,18 +1,20 @@
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-interface home {}
-const Home = (props: home) => {
+
+export default function Home() {
   return (
     <View style={styles.container}>
-      <Text>open up App.js to start working on your app!</Text>
+      <Text>Open up App.js to start working on your app!</Text>
+      {/* <StatusBar style="auto" /> */}
     </View>
   );
-};
-export default Home;
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });

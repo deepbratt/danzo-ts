@@ -1,6 +1,6 @@
 const initialNewsState = {
   user: {},
-  isLoggedin: false
+  isLoggedin: false,
 };
 const userReducer = (state = initialNewsState, action) => {
   switch (action.type) {
@@ -8,13 +8,13 @@ const userReducer = (state = initialNewsState, action) => {
       return {
         ...state,
         user: action.payload,
-        isLoggedin: true
+        isLoggedin: true,
       };
     case "LOGOUT":
       return {
         ...state,
         user: null,
-        isLoggedin: false
+        isLoggedin: false,
       };
     default:
       return state;
