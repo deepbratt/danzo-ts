@@ -1,34 +1,8 @@
-import { Ionicons } from "@expo/vector-icons";
-import * as Font from "expo-font";
-import {
-  Badge,
-  Button,
-  Container,
-  Footer,
-  FooterTab,
-  Header,
-  Icon,
-  Text,
-} from "native-base";
-import React, { useEffect, useState } from "react";
+import { Badge, Button, Container, Footer, FooterTab, Header, Icon, Text } from "native-base";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 export const MainLayout = ({ children }) => {
-  const [loader, setLoader] = useState(true);
-  useEffect(() => {
-    async () => {
-      await Font.loadAsync({
-        Roboto: require("native-base/Fonts/Roboto.ttf"),
-        Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-        ...Ionicons.font,
-      });
-      setLoader(false);
-    };
-  }, []);
-  return loader ? (
-    <View>
-      <Text>loading..</Text>
-    </View>
-  ) : (
+  return (
     <Container>
       <Header />
       <View style={styles.container}>{children}</View>
@@ -69,6 +43,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
-  },
+    justifyContent: "center"
+  }
 });

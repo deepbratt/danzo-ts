@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NativeRouter, Route } from "react-router-native";
 import MainLayout from "../layout/MainLayout";
-import { Home } from "../screens";
+import { Home, Page } from "../screens";
 const Routes = () => {
   const isLoggedIn = useSelector(state => state.userReducer.isLoggedin);
 
@@ -10,6 +10,7 @@ const Routes = () => {
     <NativeRouter>
       <MainLayout>
         <Route path="/" exact component={Home} />
+        <Route path="/page" component={Page} />
       </MainLayout>
     </NativeRouter>
   );
