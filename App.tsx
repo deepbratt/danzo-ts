@@ -1,21 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import { Badge, Button, Container, Content, Footer, FooterTab, Header, Icon, Text } from "native-base";
+import React from "react";
+export const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Container>
+      <Header />
+      <Content />
+      <Footer>
+        <FooterTab>
+          <Button badge vertical>
+            <Badge>
+              <Text>2</Text>
+            </Badge>
+            <Icon name="apps" />
+          </Button>
+          <Button vertical>
+            <Icon name="camera" />
+          </Button>
+          <Button active badge vertical>
+            <Badge>
+              <Text>51</Text>
+            </Badge>
+            <Icon active name="navigate" />
+          </Button>
+          <Button vertical>
+            <Icon name="person" />
+          </Button>
+          <Button vertical>
+            <Icon name="person" />
+          </Button>
+        </FooterTab>
+      </Footer>
+    </Container>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
